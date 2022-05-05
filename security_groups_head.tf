@@ -3,6 +3,22 @@ resource "openstack_networking_secgroup_v2" "head" {
   description = "Security Group for KYPO Head server"
 }
 
+resource "openstack_networking_secgroup_rule_v2" "remote_head_tcp" {
+  direction         = "ingress"
+  ethertype         = "IPv4"
+  protocol          = "tcp"
+  remote_group_id   = openstack_networking_secgroup_v2.head.id
+  security_group_id = openstack_networking_secgroup_v2.head.id
+}
+
+resource "openstack_networking_secgroup_rule_v2" "remote_head_udp" {
+  direction         = "ingress"
+  ethertype         = "IPv4"
+  protocol          = "udp"
+  remote_group_id   = openstack_networking_secgroup_v2.head.id
+  security_group_id = openstack_networking_secgroup_v2.head.id
+}
+
 resource "openstack_networking_secgroup_rule_v2" "head_ssh" {
   direction         = "ingress"
   ethertype         = "IPv4"
