@@ -1,4 +1,3 @@
-<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
@@ -39,6 +38,8 @@ No modules.
 | [openstack_networking_secgroup_rule_v2.remote_head_proxy_udp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_head_sandbox_access_tcp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_head_sandbox_access_udp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
+| [openstack_networking_secgroup_rule_v2.remote_head_tcp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
+| [openstack_networking_secgroup_rule_v2.remote_head_udp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_proxy_head_tcp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_proxy_head_udp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_proxy_sandbox_access_tcp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
@@ -48,9 +49,11 @@ No modules.
 | [openstack_networking_secgroup_rule_v2.remote_sandbox_access_proxy_tcp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_sandbox_access_proxy_udp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_sandbox_man_int_sandbox_man_icmp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
+| [openstack_networking_secgroup_rule_v2.remote_sandbox_man_int_sandbox_man_nodeexpoter](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_sandbox_man_int_sandbox_man_ssh](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_sandbox_man_int_sandbox_man_syslog](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.remote_sandbox_man_int_sandbox_man_winrm](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
+| [openstack_networking_secgroup_rule_v2.sandbox_internal_all](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.sandbox_man_int_dhcp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.sandbox_man_sandbox_man_int_syslog](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_v2.head](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
@@ -80,4 +83,3 @@ No modules.
 | <a name="output_private_key"></a> [private\_key](#output\_private\_key) | SSH private key for accessing KYPO proxy-jump and Kuberentes cluster instances |
 | <a name="output_sg_head_name"></a> [sg\_head\_name](#output\_sg\_head\_name) | Name of security group used by Kubernetes cluster instance hosting head services |
 | <a name="output_sg_proxy_name"></a> [sg\_proxy\_name](#output\_sg\_proxy\_name) | Name of proxy-jump security group |
-<!-- END_TF_DOCS -->
