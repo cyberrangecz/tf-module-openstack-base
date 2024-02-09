@@ -61,3 +61,13 @@ resource "openstack_networking_secgroup_rule_v2" "remote_sandbox_man_int_sandbox
   remote_group_id   = openstack_networking_secgroup_v2.sandbox_man.id
   security_group_id = openstack_networking_secgroup_v2.sandbox_man_int.id
 }
+
+resource "openstack_networking_secgroup_rule_v2" "remote_sandbox_man_int_sandbox_man_prometheus" {
+  direction         = "ingress"
+  ethertype         = "IPv4"
+  protocol          = "tcp"
+  port_range_min    = 9090
+  port_range_max    = 9090
+  remote_group_id   = openstack_networking_secgroup_v2.sandbox_man.id
+  security_group_id = openstack_networking_secgroup_v2.sandbox_man_int.id
+}
