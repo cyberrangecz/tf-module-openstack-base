@@ -73,16 +73,16 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_dns_nameservers"></a> [dns\_nameservers](#input\_dns\_nameservers) | List of DNS name servers used for instances | `list(string)` | <pre>[<br>  "1.1.1.1",<br>  "1.0.0.1"<br>]</pre> | no |
+| <a name="input_dns_nameservers"></a> [dns\_nameservers](#input\_dns\_nameservers) | List of DNS name servers used for instances | `list(string)` | <pre>[<br/>  "1.1.1.1",<br/>  "1.0.0.1"<br/>]</pre> | no |
 | <a name="input_external_network_name"></a> [external\_network\_name](#input\_external\_network\_name) | External network name used for floating IP allocation | `string` | n/a | yes |
 
 ## Outputs
 
 | Name | Description |
 |------|-------------|
-| <a name="output_keypair_name"></a> [keypair\_name](#output\_keypair\_name) | OpenStack keypair name used by KYPO proxy-jump and Kuberentes cluster instances |
-| <a name="output_network_id"></a> [network\_id](#output\_network\_id) | Id of OpenStack internal network used by KYPO proxy-jump and Kuberentes cluster instances |
-| <a name="output_private_key"></a> [private\_key](#output\_private\_key) | SSH private key for accessing KYPO proxy-jump and Kuberentes cluster instances |
+| <a name="output_keypair_name"></a> [keypair\_name](#output\_keypair\_name) | OpenStack keypair name used by proxy jump and Kuberentes cluster instances |
+| <a name="output_network_id"></a> [network\_id](#output\_network\_id) | Id of OpenStack internal network used by proxy jump and Kuberentes cluster instances |
+| <a name="output_private_key"></a> [private\_key](#output\_private\_key) | SSH private key for accessing proxy jump and Kuberentes cluster instances |
 | <a name="output_sg_head_name"></a> [sg\_head\_name](#output\_sg\_head\_name) | Name of security group used by Kubernetes cluster instance hosting head services |
-| <a name="output_sg_proxy_name"></a> [sg\_proxy\_name](#output\_sg\_proxy\_name) | Name of proxy-jump security group |
+| <a name="output_sg_proxy_name"></a> [sg\_proxy\_name](#output\_sg\_proxy\_name) | Name of proxy jump security group |
 <!-- END_TF_DOCS -->

@@ -1,6 +1,6 @@
 resource "openstack_networking_secgroup_v2" "head" {
-  name        = "kypo-base-head-sg"
-  description = "Security Group for KYPO Head server"
+  name        = "base-head-sg"
+  description = "Security Group for Head server"
 }
 
 resource "openstack_networking_secgroup_rule_v2" "remote_head_tcp" {

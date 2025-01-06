@@ -1,5 +1,5 @@
 resource "openstack_networking_secgroup_v2" "proxy" {
-  name        = "kypo-base-proxy-sg"
+  name        = "base-proxy-sg"
   description = "Security Group for Proxy Jump server"
 }
 

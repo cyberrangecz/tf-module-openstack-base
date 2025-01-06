@@ -1,5 +1,5 @@
 resource "openstack_networking_secgroup_v2" "sandbox_man" {
-  name        = "kypo-sandbox-man-sg"
+  name        = "sandbox-man-sg"
   description = "Security Group for management interface of MAN node"
 }
 

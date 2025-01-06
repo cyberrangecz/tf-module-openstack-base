@@ -1,5 +1,5 @@
 resource "openstack_networking_secgroup_v2" "sandbox_access" {
-  name        = "kypo-sandbox-access-sg"
+  name        = "sandbox-access-sg"
   description = "Security Group for access point to sandbox"
 }
 

@@ -1,5 +1,5 @@
 resource "openstack_networking_secgroup_v2" "sandbox_man_int" {
-  name                 = "kypo-sandbox-man-int-sg"
+  name                 = "sandbox-man-int-sg"
   delete_default_rules = true
   description          = "Security Group for management interfaces of user-defined nodes"
 }

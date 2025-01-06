@@ -8,6 +8,6 @@ data "openstack_identity_auth_scope_v3" "scope" {
 }
 
 resource "openstack_compute_keypair_v2" "keypair" {
-  name       = "${data.openstack_identity_auth_scope_v3.scope.project_name}-kypo"
+  name       = "${data.openstack_identity_auth_scope_v3.scope.project_name}-base"
   public_key = tls_private_key.admin.public_key_openssh
 }

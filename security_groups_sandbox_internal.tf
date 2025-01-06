@@ -1,5 +1,5 @@
 resource "openstack_networking_secgroup_v2" "sandbox_internal" {
-  name        = "kypo-sandbox-internal-sg"
+  name        = "sandbox-internal-sg"
   description = "Security Group for interfaces of user network"
 }
 
