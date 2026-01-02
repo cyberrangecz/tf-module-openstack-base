@@ -6,15 +6,15 @@ resource "openstack_networking_network_v2" "network" {
 resource "openstack_networking_subnet_v2" "subnet" {
   name            = "base-subnet"
   network_id      = openstack_networking_network_v2.network.id
-  cidr            = "192.168.64.0/18"
-  gateway_ip      = "192.168.64.1"
+  cidr            = var.network_cidr
+  gateway_ip      = cidrhost(var.network_cidr, 1)
   ip_version      = 4
   enable_dhcp     = true
   dns_nameservers = var.dns_nameservers
 
   allocation_pool {
-    start = "192.168.64.10"
-    end   = "192.168.127.254"
+    start = cidrhost(var.network_cidr, 10)
+    end   = cidrhost(var.network_cidr, -2)
   }
 }
 
@@ -36,7 +36,7 @@ resource "openstack_networking_port_v2" "port" {
 
   fixed_ip {
     subnet_id  = openstack_networking_subnet_v2.subnet.id
-    ip_address = "192.168.64.1"
+    ip_address = cidrhost(var.network_cidr, 1)
   }
 }
 

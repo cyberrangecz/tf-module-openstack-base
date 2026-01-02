@@ -75,6 +75,7 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_dns_nameservers"></a> [dns\_nameservers](#input\_dns\_nameservers) | List of DNS name servers used for instances | `list(string)` | <pre>[<br/>  "1.1.1.1",<br/>  "1.0.0.1"<br/>]</pre> | no |
 | <a name="input_external_network_name"></a> [external\_network\_name](#input\_external\_network\_name) | External network name used for floating IP allocation | `string` | n/a | yes |
+| <a name="input_network_cidr"></a> [network\_cidr](#input\_network\_cidr) | CIDR block for the base-subnet | `string` | `"192.168.64.0/18"` | no |
 
 ## Outputs
 
