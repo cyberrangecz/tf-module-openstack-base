@@ -12,3 +12,13 @@ resource "openstack_networking_secgroup_rule_v2" "sandbox_man_sandbox_man_int_sy
   remote_group_id   = openstack_networking_secgroup_v2.sandbox_man_int.id
   security_group_id = openstack_networking_secgroup_v2.sandbox_man.id
 }
+
+resource "openstack_networking_secgroup_rule_v2" "sandbox_man_sandbox_man_int_https" {
+  direction         = "ingress"
+  ethertype         = "IPv4"
+  protocol          = "tcp"
+  port_range_min    = 443
+  port_range_max    = 443
+  remote_group_id   = openstack_networking_secgroup_v2.sandbox_man_int.id
+  security_group_id = openstack_networking_secgroup_v2.sandbox_man.id
+}
