@@ -24,6 +24,16 @@ resource "openstack_networking_secgroup_rule_v2" "remote_sandbox_man_int_sandbox
   security_group_id = openstack_networking_secgroup_v2.sandbox_man_int.id
 }
 
+resource "openstack_networking_secgroup_rule_v2" "remote_sandbox_man_int_all" {
+  direction         = "egress"
+  ethertype         = "IPv4"
+  protocol          = "tcp"
+  port_range_min    = 443
+  port_range_max    = 443
+  remote_ip_prefix  = "0.0.0.0/0"
+  security_group_id = openstack_networking_secgroup_v2.sandbox_man_int.id
+}
+
 resource "openstack_networking_secgroup_rule_v2" "remote_sandbox_man_int_sandbox_man_icmp" {
   direction         = "ingress"
   ethertype         = "IPv4"
