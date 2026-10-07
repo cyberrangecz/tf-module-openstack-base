@@ -60,12 +60,15 @@ No modules.
 | [openstack_networking_secgroup_rule_v2.sandbox_man_int_dhcp](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.sandbox_man_sandbox_man_int_https](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_rule_v2.sandbox_man_sandbox_man_int_syslog](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
+| [openstack_networking_secgroup_rule_v2.sandbox_mirror_dhcp_request](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
+| [openstack_networking_secgroup_rule_v2.sandbox_mirror_gre](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_rule_v2) | resource |
 | [openstack_networking_secgroup_v2.head](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
 | [openstack_networking_secgroup_v2.proxy](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
 | [openstack_networking_secgroup_v2.sandbox_access](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
 | [openstack_networking_secgroup_v2.sandbox_internal](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
 | [openstack_networking_secgroup_v2.sandbox_man](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
 | [openstack_networking_secgroup_v2.sandbox_man_int](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
+| [openstack_networking_secgroup_v2.sandbox_mirror](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_secgroup_v2) | resource |
 | [openstack_networking_subnet_v2.subnet](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/resources/networking_subnet_v2) | resource |
 | [tls_private_key.admin](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
 | [openstack_identity_auth_scope_v3.scope](https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs/data-sources/identity_auth_scope_v3) | data source |
@@ -77,6 +80,7 @@ No modules.
 | ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_dns_nameservers"></a> [dns\_nameservers](#input\_dns\_nameservers) | List of DNS name servers used for instances | `list(string)` | <pre>[<br/>  "1.1.1.1",<br/>  "1.0.0.1"<br/>]</pre> | no |
 | <a name="input_external_network_name"></a> [external\_network\_name](#input\_external\_network\_name) | External network name used for floating IP allocation | `string` | n/a | yes |
+| <a name="input_hypervisor_cidr"></a> [hypervisor\_cidr](#input\_hypervisor\_cidr) | Narrowest CIDR covering the tunnel source addresses of the compute nodes, which send the mirrored GRE traffic. Required for network forwarding | `string` | `null` | no |
 | <a name="input_network_cidr"></a> [network\_cidr](#input\_network\_cidr) | CIDR block for the base-subnet | `string` | `"192.168.64.0/18"` | no |
 
 ## Outputs
